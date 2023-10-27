@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'constrains.dart';
+import 'widgets/search_field_bar.dart';
+import 'widgets/welcome.dart';
 
 void main() {
   runApp(const MainApp());
@@ -29,12 +31,26 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     LayoutSize.init(context);
 
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Material App Bar'),
-      ),
-      body: const Center(
-        child: Text('Hello World'),
+    debugPrint(LayoutSize.width.toString());
+    return SafeArea(
+      child: Scaffold(
+        body: Padding(
+          padding: EdgeInsets.only(left: 10.p, top: 25.p),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const Welcome(),
+                SizedBox(
+                  width: 324.pw,
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 25.p),
+                    child: const SearchFieldBar(),
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
