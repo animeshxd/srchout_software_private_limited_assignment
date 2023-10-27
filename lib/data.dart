@@ -1,24 +1,24 @@
-final categories = [
+const categories = [
   'Adventure',
   'Cruiser',
   'Sportsbike',
   'Tourer',
 ];
 
-final popularItems = [
-  const Bike(
+const popularItems = [
+  Bike(
     image: 'assets/images/meteor.jpg',
     name: 'Meteore',
     company: 'Royal Enfield',
     pricePerDay: 699,
   ),
-  const Bike(
+  Bike(
     image: 'assets/images/Indian-Scout-Bobber-2.jpg',
     name: 'Scout Bobber',
     company: 'Indian',
     pricePerDay: 1499,
   ),
-  const Bike(
+  Bike(
     image: 'assets/images/2021-Honda-Rebel-1100.jpg',
     name: 'Rebel 1100',
     company: 'Honda',
@@ -26,22 +26,22 @@ final popularItems = [
   ),
 ];
 
-final recentlyViewed = [
-  const Bike(
+const recentlyViewed = [
+  Bike(
     image: 'assets/images/hayabusa.jpg',
     name: 'Hayabusa',
     company: 'Suzuki',
     pricePerDay: 2000,
     isAvailable: true,
   ),
-  const Bike(
+  Bike(
     image: 'assets/images/Classic 350.png',
     name: 'Classic 350',
     company: 'Royal Enfield',
     pricePerDay: 1500,
     isAvailable: false,
   ),
-  const Bike(
+  Bike(
     image: 'assets/images/Ninja ZX-10r.jpg',
     name: 'Ninja ZX-10r',
     company: 'Kawasaki',
