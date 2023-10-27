@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'constrains.dart';
 import 'widgets/search_field_bar.dart';
+import 'widgets/tab_button.dart';
 import 'widgets/welcome.dart';
 
 void main() {
@@ -40,12 +41,16 @@ class HomeView extends StatelessWidget {
             child: Column(
               children: [
                 const Welcome(),
-                SizedBox(
+                Container(
                   width: 324.pw,
-                  child: Padding(
-                    padding: EdgeInsets.only(top: 25.p),
-                    child: const SearchFieldBar(),
-                  ),
+                  margin: EdgeInsets.only(top: 33.ph, bottom: 32.ph),
+                  child: const SearchFieldBar(),
+                ),
+                const Row(
+                  children: [
+                    TabButton(isActive: true, labelText: 'Adventure',),
+                    TabButton(isActive: false, labelText: 'a', ),
+                  ],
                 )
               ],
             ),

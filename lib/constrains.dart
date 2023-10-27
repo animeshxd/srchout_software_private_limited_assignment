@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 class AppTheme {
   static const mainColor = Colors.white;
   static const secondaryCOlor = Colors.black;
+  static const borderColor =  Color(0xFFBABABA);
   static final labelTextStyle = textStyle.copyWith(
     color: const Color(0xFF8C7E7E),
     fontWeight: FontWeight.w400,
