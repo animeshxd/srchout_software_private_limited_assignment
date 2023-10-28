@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'constrains.dart';
 import 'data.dart';
+import 'widgets/app_bottom_navigation_bar.dart';
 import 'widgets/bike_item.dart';
 import 'widgets/items_label.dart';
 import 'widgets/recently_viewed_bike_item.dart';
@@ -21,8 +22,11 @@ class MainApp extends StatelessWidget {
     LayoutSize.init(context);
     return MaterialApp(
       theme: ThemeData(
-        colorScheme: const ColorScheme.light(
-            background: AppTheme.mainColor, primary: Colors.black),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: AppTheme.secondaryCOlor,
+          background: AppTheme.mainColor,
+          primary: AppTheme.secondaryCOlor,
+        ),
       ),
       home: const HomeView(),
     );
@@ -84,6 +88,7 @@ class HomeView extends StatelessWidget {
             ),
           ),
         ),
+        bottomNavigationBar: const AppBottomNavigationBar(),
       ),
     );
   }
