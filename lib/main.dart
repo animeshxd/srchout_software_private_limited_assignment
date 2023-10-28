@@ -44,12 +44,7 @@ class HomeView extends StatelessWidget {
             child: Column(
               children: [
                 const Welcome(),
-                Container(
-                  width: 324.p,
-                  height: 60.p,
-                  margin: EdgeInsets.only(top: 33.p, bottom: 32.p),
-                  child: const SearchFieldBar(),
-                ),
+                const SearchFieldBar(),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
@@ -63,6 +58,8 @@ class HomeView extends StatelessWidget {
                         .toList(),
                   ),
                 )
+
+              
               ],
             ),
           ),
