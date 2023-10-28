@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../constrains.dart';
-import '../data.dart';
+import '../../../constrains.dart';
+import '../../../data.dart';
 import 'bike_item.dart';
 
-class AccessoryItem extends StatelessWidget {
-  const AccessoryItem({super.key, required this.accessory});
+class RecentlyViewedBikeItem extends StatelessWidget {
+  const RecentlyViewedBikeItem({super.key, required this.bike});
 
-  final Accessory accessory;
+  final Bike bike;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class AccessoryItem extends StatelessWidget {
             margin: EdgeInsets.only(left: 12.p),
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(accessory.image),
+                image: AssetImage(bike.image),
                 fit: BoxFit.cover,
               ),
               borderRadius: BorderRadius.circular(5),
@@ -41,21 +41,21 @@ class AccessoryItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              BikeName(name: accessory.name),
-              BikePrice(price: accessory.pricePerDay),
+              BikeName(name: bike.name),
+              BikePrice(price: bike.pricePerDay),
             ],
           ),
           const Expanded(child: SizedBox.shrink()),
-          CartStatus(total: accessory.inCart)
+          AvailableStatus(isAvailable: bike.isAvailable)
         ],
       ),
     );
   }
 }
 
-class CartStatus extends StatelessWidget {
-  const CartStatus({super.key, this.total = 0});
-  final int total;
+class AvailableStatus extends StatelessWidget {
+  const AvailableStatus({super.key, this.isAvailable = false});
+  final bool isAvailable;
 
   @override
   Widget build(BuildContext context) {
@@ -65,15 +65,15 @@ class CartStatus extends StatelessWidget {
       height: 22.p,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),
-        color: total > 0 ? AppTheme.secondaryCOlor : const Color(0xFFBFC5BF),
+        color: isAvailable ? AppTheme.secondaryCOlor : const Color(0xFFBFC5BF),
       ),
       child: Center(
         child: Text(
-          total > 0 ? '$total' : 'Add',
+          isAvailable ? 'Available' : 'Booked',
           style: AppTheme.textStyle.copyWith(
             fontSize: 15.pf,
             fontWeight: FontWeight.w500,
-            color: total > 0 ? Colors.white : Colors.black,
+            color: isAvailable ? Colors.white : Colors.black,
           ),
         ),
       ),

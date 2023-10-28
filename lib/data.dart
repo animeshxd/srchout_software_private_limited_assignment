@@ -63,10 +63,11 @@ const accessories = [
     pricePerDay: 800,
   ),
   Accessory(
-      image: 'assets/images/Helmet.jpg',
-      name: 'Helmet',
-      pricePerDay: 800,
-      inCart: 1),
+    image: 'assets/images/Helmet.jpg',
+    name: 'Helmet',
+    pricePerDay: 800,
+    inCart: 1,
+  ),
   Accessory(
     image: 'assets/images/Riding Boots.jpg',
     name: 'Riding Boots',

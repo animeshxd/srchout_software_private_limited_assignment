@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constrains.dart';
+import '../../../constrains.dart';
 
 class SearchFieldBar extends StatelessWidget {
   const SearchFieldBar({super.key});

@@ -8,7 +8,12 @@ class CustomAppBar extends PreferredSize {
   }) : super(
           preferredSize: Size(LayoutSize.width, 99.p),
           child: Container(
-            margin: EdgeInsets.only(top: 20.ph, left: 22.p, right: 22.p, bottom: 20.ph,),
+            margin: EdgeInsets.only(
+              top: 20.ph,
+              left: 22.p,
+              right: 22.p,
+              bottom: 20.ph,
+            ),
             child: Row(
               children: [
                 SizedBox(

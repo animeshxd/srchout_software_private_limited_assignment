@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constrains.dart';
+import '../../../constrains.dart';
 
 class TabButton extends StatelessWidget {
   const TabButton({super.key, this.isActive = false, required this.labelText});
@@ -25,10 +25,9 @@ class TabButton extends StatelessWidget {
         child: Text(
           labelText,
           style: AppTheme.textStyle.copyWith(
-            color: isActive ? AppTheme.mainColor : AppTheme.secondaryCOlor,
-            fontWeight: FontWeight.w500,
-            fontSize: 18.pf
-          ),
+              color: isActive ? AppTheme.mainColor : AppTheme.secondaryCOlor,
+              fontWeight: FontWeight.w500,
+              fontSize: 18.pf),
         ),
       ),
     );

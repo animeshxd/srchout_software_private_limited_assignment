@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../constrains.dart';
-import '../data.dart';
+import '../../../constrains.dart';
+import '../../../data.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
@@ -27,14 +27,14 @@ class Welcome extends StatelessWidget {
               TextSpan(
                 text: 'Welcome\n',
                 style: AppTheme.labelTextStyle
-                    .copyWith(fontSize: 12.pf, height: 14.pf/12.pf),
+                    .copyWith(fontSize: 12.pf, height: 14.pf / 12.pf),
               ),
               TextSpan(
                 text: user.name,
                 style: AppTheme.textStyle.copyWith(
                   fontSize: 15.pf,
                   fontWeight: FontWeight.w600,
-                  height: 18.pf/15.pf,
+                  height: 18.pf / 15.pf,
                 ),
               ),
             ],

@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import '../constrains.dart';
-import '../data.dart';
-import '../widgets/app_bottom_navigation_bar.dart';
-import '../widgets/bike_item.dart';
-import '../widgets/items_label.dart';
-import '../widgets/recently_viewed_bike_item.dart';
-import '../widgets/search_field_bar.dart';
-import '../widgets/tab_button.dart';
-import '../widgets/welcome.dart';
+
+import '../../constrains.dart';
+import '../../data.dart';
+import '../../widgets/app_bottom_navigation_bar.dart';
+import '../../widgets/items_label.dart';
+
+import 'widgets/widgets.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -44,8 +42,7 @@ class HomeView extends StatelessWidget {
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
-                  children:
-                      popularItems.map((e) => BikeItem(bike: e)).toList(),
+                  children: popularItems.map((e) => BikeItem(bike: e)).toList(),
                 ),
               ),
               Container(
