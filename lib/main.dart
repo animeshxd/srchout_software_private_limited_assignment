@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'constrains.dart';
+import 'data.dart';
 import 'widgets/search_field_bar.dart';
 import 'widgets/tab_button.dart';
 import 'widgets/welcome.dart';
@@ -28,6 +29,8 @@ class MainApp extends StatelessWidget {
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
+  final currentTabIndex = 1;
+
   @override
   Widget build(BuildContext context) {
     LayoutSize.init(context);
@@ -46,11 +49,18 @@ class HomeView extends StatelessWidget {
                   margin: EdgeInsets.only(top: 33.ph, bottom: 32.ph),
                   child: const SearchFieldBar(),
                 ),
-                const Row(
-                  children: [
-                    TabButton(isActive: true, labelText: 'Adventure',),
-                    TabButton(isActive: false, labelText: 'a', ),
-                  ],
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: categories
+                        .asMap()
+                        .entries
+                        .map((kv) => TabButton(
+                              labelText: kv.value,
+                              isActive: kv.key == currentTabIndex,
+                            ))
+                        .toList(),
+                  ),
                 )
               ],
             ),
