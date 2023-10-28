@@ -68,9 +68,10 @@ class BikeItem extends StatelessWidget {
 }
 
 class BikePrice extends StatelessWidget {
-  const BikePrice({super.key, required this.price});
+  const BikePrice({super.key, required this.price, this.color});
 
   final double price;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -83,6 +84,7 @@ class BikePrice extends StatelessWidget {
               fontSize: 18.pf,
               height: 21.pf / 18.pf,
               fontWeight: FontWeight.w500,
+              color: color,
             ),
           ),
           TextSpan(
@@ -91,6 +93,7 @@ class BikePrice extends StatelessWidget {
               fontSize: 17.pf,
               height: 20.pf / 18.pf,
               fontWeight: FontWeight.w500,
+              color: color,
             ),
           )
         ],
