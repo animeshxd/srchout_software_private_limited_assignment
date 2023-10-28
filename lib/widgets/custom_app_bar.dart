@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:srchout_software_private_limited_assignment/constrains.dart';
+import '../constrains.dart';
 
 class CustomAppBar extends PreferredSize {
   CustomAppBar({
     super.key,
     required String title,
   }) : super(
-          preferredSize: Size(LayoutSize.width, 70.p),
+          preferredSize: Size(LayoutSize.width, 99.p),
           child: Container(
-            margin: EdgeInsets.only(top: 31.ph, left: 22.p, right: 22.p),
+            margin: EdgeInsets.only(top: 20.ph, left: 22.p, right: 22.p, bottom: 20.ph,),
             child: Row(
               children: [
                 SizedBox(
@@ -19,6 +19,7 @@ class CustomAppBar extends PreferredSize {
                 SizedBox(width: 31.p),
                 Expanded(
                   child: Container(
+                    height: 61.p,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       border: AppTheme.borderStyle,
