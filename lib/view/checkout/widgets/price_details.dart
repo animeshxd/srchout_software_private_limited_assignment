@@ -66,15 +66,32 @@ class PriceDetails extends StatelessWidget {
         Text(
           why,
           style: AppTheme.textStyle.copyWith(
-              fontSize: 18.pf, fontWeight: FontWeight.w300, height: 21 / 18),
-        ),
-        const Align(
-          alignment: Alignment.centerRight,
-          child: Text('₹ '),
+            fontSize: 18.pf,
+            fontWeight: FontWeight.w300,
+            height: 21 / 18,
+          ),
         ),
         Align(
           alignment: Alignment.centerRight,
-          child: Text(price),
+          child: Text(
+            '₹ ',
+            style: AppTheme.textStyle.copyWith(
+              fontSize: 18.pf,
+              fontWeight: FontWeight.w300,
+              height: 21 / 18,
+            ),
+          ),
+        ),
+        Align(
+          alignment: Alignment.centerRight,
+          child: Text(
+            price,
+            style: AppTheme.textStyle.copyWith(
+              fontSize: 18.pf,
+              fontWeight: FontWeight.w300,
+              height: 21 / 18,
+            ),
+          ),
         ),
       ],
     );
