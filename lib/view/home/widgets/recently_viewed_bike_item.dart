@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../constrains.dart';
-import '../../../data.dart';
+import '../../../models.dart';
 import 'bike_item.dart';
 
 class RecentlyViewedBikeItem extends StatelessWidget {

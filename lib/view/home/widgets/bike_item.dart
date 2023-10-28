@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../constrains.dart';
-import '../../../data.dart';
+import '../../../models.dart';
 
 class BikeItem extends StatelessWidget {
   const BikeItem({super.key, required this.bike});

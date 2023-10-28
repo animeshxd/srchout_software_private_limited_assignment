@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../constrains.dart';
-import '../../../data.dart';
+import '../../../models.dart';
 import '../../home/widgets/bike_item.dart';
 
 class AccessoryItem extends StatelessWidget {
