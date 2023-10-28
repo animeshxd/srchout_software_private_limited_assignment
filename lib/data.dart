@@ -54,17 +54,24 @@ const accessories = [
   Accessory(
     image: 'assets/images/bike jacket.jpg',
     name: 'Riding Jacket',
-    pricePerDay: '800',
+    pricePerDay: 800,
+    inCart: 1,
   ),
   Accessory(
     image: 'assets/images/Riding Gloves.jpg',
     name: 'Riding Gloves',
-    pricePerDay: '800',
+    pricePerDay: 800,
   ),
+  Accessory(
+      image: 'assets/images/Helmet.jpg',
+      name: 'Helmet',
+      pricePerDay: 800,
+      inCart: 1),
   Accessory(
     image: 'assets/images/Riding Boots.jpg',
     name: 'Riding Boots',
-    pricePerDay: '800',
+    pricePerDay: 800,
+    inCart: 1,
   ),
 ];
 
@@ -112,11 +119,13 @@ class User {
 class Accessory {
   final String image;
   final String name;
-  final String pricePerDay;
+  final double pricePerDay;
+  final int inCart;
 
   const Accessory({
     required this.image,
     required this.name,
     required this.pricePerDay,
+    this.inCart = 0,
   });
 }
