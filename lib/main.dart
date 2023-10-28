@@ -45,8 +45,9 @@ class HomeView extends StatelessWidget {
               children: [
                 const Welcome(),
                 Container(
-                  width: 324.pw,
-                  margin: EdgeInsets.only(top: 33.ph, bottom: 32.ph),
+                  width: 324.p,
+                  height: 60.p,
+                  margin: EdgeInsets.only(top: 33.p, bottom: 32.p),
                   child: const SearchFieldBar(),
                 ),
                 SingleChildScrollView(

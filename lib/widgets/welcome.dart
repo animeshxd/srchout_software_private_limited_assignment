@@ -26,14 +26,14 @@ class Welcome extends StatelessWidget {
               TextSpan(
                 text: 'Welcome\n',
                 style: AppTheme.labelTextStyle
-                    .copyWith(fontSize: 12.pf, height: 2.pf),
+                    .copyWith(fontSize: 12.pf, height: 14.pf/12.pf),
               ),
               TextSpan(
                 text: user.name,
                 style: AppTheme.textStyle.copyWith(
                   fontSize: 15.pf,
                   fontWeight: FontWeight.w600,
-                  height: 2.pf,
+                  height: 18.pf/15.pf,
                 ),
               ),
             ],

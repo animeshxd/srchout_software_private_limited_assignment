@@ -16,11 +16,10 @@ class SearchFieldBar extends StatelessWidget {
           borderSide: BorderSide.none,
         ),
         hoverColor: Colors.transparent,
-        contentPadding: EdgeInsets.all(25.p),
         prefixIcon: Container(
           margin: EdgeInsets.only(left: 13.p),
-          width: 25,
-          height: 25,
+          width: 25.p,
+          height: 25.p,
           child: SVGIcons.magnfying,
         ),
         hintText: 'Search Bike',
