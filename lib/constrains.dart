@@ -20,6 +20,8 @@ class AppIcons {
   static var magnfying = SvgPicture.asset('assets/icons/magnfying.svg');
   static var settings = Image.asset('assets/icons/Settings.png');
   static var map = Image.asset('assets/icons/Map Marker.png');
+  static var backArrow = SvgPicture.asset('assets/icons/back_arrow.svg');
+  static var calender = Image.asset('assets/icons/calender.png');
 }
 
 class LayoutSize {
