@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:srchout_software_private_limited_assignment/widgets/recently_viewed_bike_item.dart';
 
 import 'constrains.dart';
 import 'data.dart';
 import 'widgets/bike_item.dart';
 import 'widgets/items_label.dart';
+import 'widgets/recently_viewed_bike_item.dart';
 import 'widgets/search_field_bar.dart';
 import 'widgets/tab_button.dart';
 import 'widgets/welcome.dart';
