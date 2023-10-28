@@ -50,6 +50,34 @@ const recentlyViewed = [
   ),
 ];
 
+const accessories = [
+  Accessory(
+    image: 'assets/images/bike jacket.jpg',
+    name: 'Riding Jacket',
+    pricePerDay: '800',
+  ),
+  Accessory(
+    image: 'assets/images/Riding Gloves.jpg',
+    name: 'Riding Gloves',
+    pricePerDay: '800',
+  ),
+  Accessory(
+    image: 'assets/images/Riding Boots.jpg',
+    name: 'Riding Boots',
+    pricePerDay: '800',
+  ),
+];
+
+const bikeDetails = Bike(
+  image: 'assets/images/Scout Bobber.jpg',
+  name: 'Scout Bobber',
+  company: 'Indian',
+  pricePerDay: 1499,
+  category: 'Cruiser',
+  displacement: '1133 cc',
+  maxSpeed: '124 km/h',
+);
+
 const user = User(name: 'Abhi Tiwari', image: 'assets/images/profile.png');
 
 class Bike {
@@ -58,18 +86,20 @@ class Bike {
   final String company;
   final double pricePerDay;
   final bool isAvailable;
+  final String category;
+  final String displacement;
+  final String maxSpeed;
+
   const Bike({
     required this.image,
     required this.name,
     required this.company,
     required this.pricePerDay,
     this.isAvailable = false,
+    this.category = '',
+    this.displacement = '',
+    this.maxSpeed = '',
   });
-
-  @override
-  String toString() {
-    return 'Bike(name: $name, company: $company, pricePerDay: $pricePerDay, isAvailable: $isAvailable)';
-  }
 }
 
 class User {
@@ -77,4 +107,16 @@ class User {
   final String image;
 
   const User({required this.name, required this.image});
+}
+
+class Accessory {
+  final String image;
+  final String name;
+  final String pricePerDay;
+
+  const Accessory({
+    required this.image,
+    required this.name,
+    required this.pricePerDay,
+  });
 }
