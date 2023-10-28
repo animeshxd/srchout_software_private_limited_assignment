@@ -31,7 +31,7 @@ class CheckOutView extends StatelessWidget {
                 alignment: Alignment.topLeft,
                 child: Text(
                   'Details',
-                  style: TextStyle(
+                  style: AppTheme.textStyle.copyWith(
                     fontSize: 18.pf,
                     height: 21.pf / 18.pf,
                     fontWeight: FontWeight.w600,

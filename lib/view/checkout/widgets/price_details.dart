@@ -16,14 +16,14 @@ class PriceDetails extends StatelessWidget {
           children: [
             Text(
               'Days',
-              style: TextStyle(
+              style: AppTheme.textStyle.copyWith(
                 fontSize: 18.pf,
                 fontWeight: FontWeight.w300,
               ),
             ),
             Text(
               '4',
-              style: TextStyle(
+              style: AppTheme.textStyle.copyWith(
                 fontSize: 18.pf,
                 fontWeight: FontWeight.w300,
               ),
@@ -65,7 +65,7 @@ class PriceDetails extends StatelessWidget {
       children: [
         Text(
           why,
-          style: TextStyle(
+          style: AppTheme.textStyle.copyWith(
               fontSize: 18.pf, fontWeight: FontWeight.w300, height: 21 / 18),
         ),
         const Align(

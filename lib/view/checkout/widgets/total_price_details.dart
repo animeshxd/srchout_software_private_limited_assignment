@@ -15,7 +15,7 @@ class TotalPriceDetails extends StatelessWidget {
       children: [
         Text(
           'Total Amount',
-          style: TextStyle(
+          style: AppTheme.textStyle.copyWith(
             fontSize: 18.pf,
             height: 21 / 18,
             fontWeight: FontWeight.w600,
@@ -23,7 +23,7 @@ class TotalPriceDetails extends StatelessWidget {
         ),
         Text(
           '₹ $total',
-          style: TextStyle(
+          style: AppTheme.textStyle.copyWith(
             fontSize: 18.pf,
             height: 21 / 18,
             fontWeight: FontWeight.w600,

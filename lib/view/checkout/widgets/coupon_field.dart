@@ -16,7 +16,7 @@ class CouponField extends StatelessWidget {
           ),
           contentPadding: const EdgeInsets.only(left: 11),
           hintText: 'Apply coupon',
-          hintStyle: TextStyle(
+          hintStyle: AppTheme.textStyle.copyWith(
             fontWeight: FontWeight.w500,
             fontSize: 20.pf,
             color: const Color(0xFF8C7E7E),

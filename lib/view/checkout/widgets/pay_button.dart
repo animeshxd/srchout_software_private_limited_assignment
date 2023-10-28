@@ -13,10 +13,10 @@ class PayButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         color: AppTheme.secondaryCOlor,
       ),
-      child: const Center(
+      child: Center(
         child: Text(
           "PAY",
-          style: TextStyle(
+          style: AppTheme.textStyle.copyWith(
             fontSize: 30,
             fontWeight: FontWeight.w700,
             color: Colors.white,
