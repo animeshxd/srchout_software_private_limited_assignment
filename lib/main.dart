@@ -50,13 +50,13 @@ class BikeDetailsView extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               const SizedBox(height: 33),
-              SizedBox(
-                height: 282.p,
+              IntrinsicHeight(
+                // height: 282.p,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         BikeNameWithCompanyDetail(
@@ -71,23 +71,22 @@ class BikeDetailsView extends StatelessWidget {
                           label: 'Displacement',
                           text: bikeDetails.displacement,
                         ),
+                        BikeDetail(
+                          label: 'Max. Speed',
+                          text: bikeDetails.maxSpeed,
+                        ),
                       ],
                     ),
-                    const BikeImage(),
+                    Column(
+                      children: [
+                        const BikeImage(),
+                        SizedBox(height: 18.ph),
+                        RentButton(price: bikeDetails.pricePerDay)
+                      ],
+                    ),
                   ],
                 ),
               ),
-              SizedBox(height: 18.ph),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  BikeDetail(
-                    label: 'Max. Speed',
-                    text: bikeDetails.maxSpeed,
-                  ),
-                  RentButton(price: bikeDetails.pricePerDay)
-                ],
-              )
             ],
           ),
         ),
