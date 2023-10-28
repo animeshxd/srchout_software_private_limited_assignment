@@ -19,49 +19,47 @@ class HomeView extends StatelessWidget {
     LayoutSize.init(context);
     return SafeArea(
       child: Scaffold(
-        body: Padding(
+        body: SingleChildScrollView(
           padding: EdgeInsets.only(left: 10.p),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                const Welcome(),
-                const SearchFieldBar(),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: categories
-                        .asMap()
-                        .entries
-                        .map((kv) => TabButton(
-                              labelText: kv.value,
-                              isActive: kv.key == currentTabIndex,
-                            ))
-                        .toList(),
-                  ),
+          child: Column(
+            children: [
+              const Welcome(),
+              const SearchFieldBar(),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: categories
+                      .asMap()
+                      .entries
+                      .map((kv) => TabButton(
+                            labelText: kv.value,
+                            isActive: kv.key == currentTabIndex,
+                          ))
+                      .toList(),
                 ),
-                SizedBox(height: 38.ph),
-                const ItemsLabel('Popular', 'item'),
-                SizedBox(height: 18.ph),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children:
-                        popularItems.map((e) => BikeItem(bike: e)).toList(),
-                  ),
+              ),
+              SizedBox(height: 38.ph),
+              const ItemsLabel('Popular', 'item'),
+              SizedBox(height: 18.ph),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children:
+                      popularItems.map((e) => BikeItem(bike: e)).toList(),
                 ),
-                Container(
-                  margin: EdgeInsets.only(top: 26.ph, bottom: 18.ph),
-                  child: const ItemsLabel('Recently', 'viewed'),
-                ),
-                ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: recentlyViewed.length,
-                  itemBuilder: (context, index) {
-                    return RecentlyViewedBikeItem(bike: recentlyViewed[index]);
-                  },
-                )
-              ],
-            ),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 26.ph, bottom: 18.ph),
+                child: const ItemsLabel('Recently', 'viewed'),
+              ),
+              ListView.builder(
+                shrinkWrap: true,
+                itemCount: recentlyViewed.length,
+                itemBuilder: (context, index) {
+                  return RecentlyViewedBikeItem(bike: recentlyViewed[index]);
+                },
+              )
+            ],
           ),
         ),
         bottomNavigationBar: const AppBottomNavigationBar(),
