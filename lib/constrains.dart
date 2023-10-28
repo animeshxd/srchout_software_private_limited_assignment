@@ -5,8 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 class AppTheme {
   static const mainColor = Colors.white;
   static const secondaryCOlor = Colors.black;
-  static const borderColor =  Color(0xFFBABABA);
-  static Border get borderStyle =>  Border.all(width: 2.p, color: borderColor);
+  static const borderColor = Color(0xFFBABABA);
+  static Border get borderStyle => Border.all(width: 2.p, color: borderColor);
   static final labelTextStyle = textStyle.copyWith(
     color: const Color(0xFF8C7E7E),
     fontWeight: FontWeight.w400,
@@ -14,11 +14,12 @@ class AppTheme {
   static final textStyle = GoogleFonts.roboto(color: Colors.black);
 }
 
-class SVGIcons {
-  static var cardWallet = SvgPicture.asset('assets/icons/Card Wallet.svg');
-  static var home = SvgPicture.asset('assets/icons/Home.svg');
+class AppIcons {
+  static var cardWallet = Image.asset('assets/icons/Card Wallet.png');
+  static var home = Image.asset('assets/icons/Home.png');
   static var magnfying = SvgPicture.asset('assets/icons/magnfying.svg');
-  static var settings = SvgPicture.asset('assets/icons/Settings.svg');
+  static var settings = Image.asset('assets/icons/Settings.png');
+  static var map = Image.asset('assets/icons/Map Marker.png');
 }
 
 class LayoutSize {

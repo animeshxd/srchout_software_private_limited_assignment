@@ -24,7 +24,7 @@ class SearchFieldBar extends StatelessWidget {
             margin: EdgeInsets.only(left: 13.p),
             width: 25.p,
             height: 25.p,
-            child: SVGIcons.magnfying,
+            child: AppIcons.magnfying,
           ),
           hintText: 'Search Bike',
           hintStyle: AppTheme.textStyle.copyWith(
