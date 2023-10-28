@@ -6,11 +6,12 @@ class AppTheme {
   static const mainColor = Colors.white;
   static const secondaryCOlor = Colors.black;
   static const borderColor =  Color(0xFFBABABA);
+  static Border get borderStyle =>  Border.all(width: 2.p, color: borderColor);
   static final labelTextStyle = textStyle.copyWith(
     color: const Color(0xFF8C7E7E),
     fontWeight: FontWeight.w400,
   );
-  static final textStyle = GoogleFonts.roboto();
+  static final textStyle = GoogleFonts.roboto(color: Colors.black);
 }
 
 class SVGIcons {

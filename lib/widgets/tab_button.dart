@@ -27,6 +27,7 @@ class TabButton extends StatelessWidget {
           style: AppTheme.textStyle.copyWith(
             color: isActive ? AppTheme.mainColor : AppTheme.secondaryCOlor,
             fontWeight: FontWeight.w500,
+            fontSize: 18.pf
           ),
         ),
       ),

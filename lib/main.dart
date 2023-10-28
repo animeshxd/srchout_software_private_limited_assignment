@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:srchout_software_private_limited_assignment/widgets/recently_viewed_bike_item.dart';
 
 import 'constrains.dart';
 import 'data.dart';
+import 'widgets/bike_item.dart';
+import 'widgets/items_label.dart';
 import 'widgets/search_field_bar.dart';
 import 'widgets/tab_button.dart';
 import 'widgets/welcome.dart';
@@ -34,12 +37,10 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     LayoutSize.init(context);
-
-    debugPrint(LayoutSize.width.toString());
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: EdgeInsets.only(left: 10.p, top: 25.p),
+          padding: EdgeInsets.only(left: 10.p),
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -57,9 +58,28 @@ class HomeView extends StatelessWidget {
                             ))
                         .toList(),
                   ),
+                ),
+                SizedBox(height: 38.ph),
+                const ItemsLabel('Popular', 'item'),
+                SizedBox(height: 18.ph),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children:
+                        popularItems.map((e) => BikeItem(bike: e)).toList(),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 26.ph, bottom: 18.ph),
+                  child: const ItemsLabel('Recently', 'viewed'),
+                ),
+                ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: recentlyViewed.length,
+                  itemBuilder: (context, index) {
+                    return RecentlyViewedBikeItem(bike: recentlyViewed[index]);
+                  },
                 )
-
-              
               ],
             ),
           ),
