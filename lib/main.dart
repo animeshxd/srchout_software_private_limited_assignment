@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:srchout_software_private_limited_assignment/data.dart';
-import 'package:srchout_software_private_limited_assignment/widgets/app_bottom_navigation_bar.dart';
-import 'package:srchout_software_private_limited_assignment/widgets/bike_item.dart';
-import 'package:srchout_software_private_limited_assignment/widgets/custom_app_bar.dart';
 
 import 'constrains.dart';
-import 'view/home_view.dart';
+import 'data.dart';
+import 'widgets/app_bottom_navigation_bar.dart';
+import 'widgets/custom_app_bar.dart';
 
 void main() {
   runApp(const MainApp());
